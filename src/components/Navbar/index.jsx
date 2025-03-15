@@ -10,30 +10,55 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex lg:justify-around lg:text-center justify-between items-center px-4 py-3">
-      {/* Left: Logo */}
+    <div className="relative flex lg:justify-around lg:text-center justify-between items-center px-4 py-3">
+      {/* Logo (Visible always) */}
       <div>
-        <img src="WC-1.svg" className="lg:block h-10 lg:h-auto" alt="Logo" />
+        <img src="WC-1.svg" className="h-8 lg:h-10" alt="Logo" />
       </div>
 
-      {/* Mobile Menu Toggle (Now at the Right) */}
-      <div className="md:hidden">
-        <button onClick={toggleMenu} className="text-2xl focus:outline-none">
-          ☰
-        </button>
-      </div>
-
-      {/* Navigation Links */}
-      <nav className={`lg:flex ${isOpen ? "flex flex-col absolute top-14 right-4 bg-white p-4 rounded shadow-md w-[200px]" : "hidden"}`}>
-        <ul className="flex flex-col lg:flex-row gap-6 lg:gap-10 text-center">
+      {/* Desktop Navigation */}
+      <nav className="hidden lg:flex">
+        <ul className="flex flex-row gap-8 text-base">
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#faq">FAQs</a></li>
-          <li className="uppercase bg-[#5a00a1] text-white w-[149px] p-3 text-[12px] rounded-full font-black text-center">
+          <li className="uppercase bg-[#5a00a1] text-white w-[140px] p-2 text-xs rounded-full font-bold text-center">
             <a href="#">Download App</a>
           </li>
         </ul>
       </nav>
+
+      {/* Mobile Menu Button */}
+      <div className="lg:hidden">
+        <button onClick={toggleMenu} className="text-xl focus:outline-none">
+          ☰
+        </button>
+      </div>
+
+      {/* Mobile Menu (Smaller and Centered) */}
+      {isOpen && (
+        <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-white w-[90%] max-w-[320px] rounded-lg p-5 z-50">
+          {/* Close Button */}
+          <button onClick={toggleMenu} className="absolute top-3 right-4 text-xl">
+            ✖
+          </button>
+
+          {/* Logo (Still Visible) */}
+          <div className="flex justify-center">
+            <img src="WC-1.svg" className="h-8" alt="Logo" />
+          </div>
+
+          {/* Navigation Links */}
+          <ul className="flex flex-col gap-3 text-sm text-center mt-4">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li className="uppercase bg-[#5a00a1] text-white w-[140px] p-2 text-xs rounded-full font-bold">
+              <a href="#">Download App</a>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
