@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div className="flex flex-col items-center mt-16 lg:mt-20 px-4">
+        <div id="about" className="flex flex-col items-center mt-16 lg:mt-10 px-4">
             {/* Main Image */}
             <img src="image-1.webp" alt="World Travel Landmarks" className="w-[90%] lg:w-[65%] rounded-[10px] shadow-[8px_8px_0_0_#5a00a1]" />
 

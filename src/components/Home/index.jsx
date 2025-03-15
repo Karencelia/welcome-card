@@ -7,7 +7,9 @@ import Footer from "@/components/Footer/index";
 export default function Home() {
     return (
         <div className="h-auto mx-0 py-8">
+            <header>
             <Navbar />
+            </header>
 
             {/* Hero Section */}
             <div className="flex flex-col lg:flex-row justify-between items-center mt-10 lg:mt-20 relative px-4">
@@ -20,7 +22,7 @@ export default function Home() {
 
                 {/* Centered Text */}
                 <div className="flex flex-col items-center text-center w-full lg:w-[600px] mt-6 lg:mt-10">
-                    <h1 className="text-[36px] lg:text-[62px] text-[#0c005b] font-black leading-snug lg:leading-normal mb-4 lg:mb-6">
+                    <h1 className="text-[36px] lg:text-[62px] text-[#0c005b] font-black leading-snug lg:leading-normal mb-4 lg:mb-6 pay">
                         Pay like a local wherever you go!
                     </h1>
                     <p className="text-[#0c005b] mt-2 lg:mt-4 text-base lg:text-lg w-[90%] lg:w-full">
@@ -39,7 +41,7 @@ export default function Home() {
             </div>
 
             {/* Center Image */}
-            <div className="flex justify-center items-center mt-10 lg:mt-20">
+            <div className="flex justify-center items-center mt-10 lg:mt-10">
                 <img src="center-image-final.webp" alt="World Travel Landmarks" className="w-[90%] lg:w-[72%]" />
             </div>
 

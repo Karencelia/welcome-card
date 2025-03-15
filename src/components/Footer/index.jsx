@@ -1,8 +1,5 @@
 import Link from "next/link";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faLinkedinIn, faFacebookF } from "@fortawesome/free-brands-svg-icons";
-
 export default function Footer() {
   return (
 <footer className="bg-[#0c005b] text-white py-16 px-10 md:px-10 mt-20">
