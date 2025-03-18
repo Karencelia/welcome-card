@@ -1,5 +1,7 @@
 "use client"
 import dynamic from "next/dynamic";
+import { ThumbsUp } from "lucide-react";
+import { useState } from "react";
 import Navbar from "@/components/Navbar/index";
 import Footer from "@/components/Footer/index";
 
@@ -17,11 +19,28 @@ const MotionIMG = dynamic(() => import('framer-motion').then((m) => m.motion.img
     ssr: false,
 });
 
+const LikeButton = () => { 
+    const [liked, setLiked] = useState(false);
+  
+    return (
+      <button
+        className={`absolute bottom-6 right-6 p-2 rounded-full shadow-lg bg-blue-700 text-white transition-all ${
+          liked ? "text-blue-600 scale-110" : "text-gray-500 hover:scale-110"
+        }`}
+        onClick={() => setLiked(!liked)}
+      >
+        <ThumbsUp className="w-6 h-6" />
+      </button>
+    );
+  };
+  
+
 export default function Home() {
     return (
-        <div className="h-auto py-8">
-            {/* Navbar */}
+        <div className="h-auto mx-0 py-0 sm:pt-8">
+            <header>
             <Navbar />
+            </header>
 
             {/* Privacy Policy Content */}
             <MotionDiv className="w-full max-w-[90%] md:max-w-[75%] mx-auto mt-10 md:mt-50 px-4"
@@ -48,7 +67,7 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.6 }}>Last updated: 2nd December 2022</MotionP>
 
-                <MotionDiv className="flex justify-center"
+                <MotionDiv className="relative flex justify-center"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}>
@@ -57,6 +76,7 @@ export default function Home() {
                         alt="Security Mobile"
                         className="w-full mt-4 md:mt-10 rounded-lg"
                     />
+                    <LikeButton />
                 </MotionDiv>
 
                 {/* 1. PURPOSE OF THIS PRIVACY POLICY */}

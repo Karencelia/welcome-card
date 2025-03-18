@@ -3,13 +3,11 @@ import Link from "next/link";
 export default function Footer() {
   return (
 <footer className="bg-[#0c005b] text-white py-16 px-10 md:px-10 mt-20">
-  <div className="mx-auto w-full flex flex-col gap-10 text-center md:grid md:grid-cols-3 md:text-left">
-    {/* Logo Section */}
+  <div className="mx-auto w-[75%] flex flex-col gap-10 text-center md:grid md:grid-cols-3 md:text-left">
     <div className="flex flex-col items-center md:items-start">
       <img src="Group-3602.svg" alt="Welcome Card Logo" width={150} className="text-white" />
     </div>
 
-    {/* Company Links */}
     <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:justify-evenly">
       <div>
         <h4 className="text-[14px] font-bold text-[#ff85ff] uppercase">Company</h4>
