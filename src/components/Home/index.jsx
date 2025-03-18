@@ -14,8 +14,8 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row justify-between items-center mt-10 lg:mt-20 relative px-4">
                 
                 <div className="relative mb-[25px] hidden lg:block">
-                    <img src="5569310.webp" alt="" width={150} className="absolute left-[30px]" />
-                    <img src="bag-image.webp" width={310} alt="" className="relative top-4 left-[80px] z-10" />
+                    <img src="5569310.webp" alt="Phone Image" width={150} className="absolute left-[25px]" />
+                    <img src="bag-image.webp" width={310} alt="Bag Image" className="relative top-4 left-[75px] z-10" />
                 </div>
 
                 <div className="flex flex-col items-center text-center w-full lg:w-[600px] mt-6 lg:mt-10">
@@ -31,8 +31,8 @@ export default function Home() {
                 </div>
 
                 <div className="relative hidden lg:block">
-                    <img src="Map.png" alt="" width={210} className="absolute bottom-[55px] left-[25px]" />
-                    <img src="Plane.webp" alt="" width={250} className="relative right-20 bottom-[40px] z-10" />
+                    <img src="Map.png" alt="Map Image" width={210} className="absolute bottom-[80px] left-[20px]" />
+                    <img src="Plane.webp" alt="Plane Image" width={250} className="relative right-15 bottom-[40px] z-10" />
                 </div>
             </div>
 
